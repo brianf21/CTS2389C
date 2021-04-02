@@ -5,5 +5,5 @@ $Gateway = Read-Host "What is the gateway? "
 $Host_Name = Read-Host "What is the hostname? "
 $DNSServers = Read-Host "What are the DNS Server addresses separated by commas? "
 
-New-NetIPAddress -IPAddress "$IPAddress" -PrefixLength "$SubnetMask" -DefaultGateway "$Gateway" -InterfaceAlias $nic | Set-DnsClientServerAddress -ServerAddresses "$DNSServers"
+New-NetIPAddress -IPAddress "$IPAddress" -PrefixLength "$SubnetMask" -DefaultGateway "$Gateway" -InterfaceAlias "$nic" | Set-DnsClientServerAddress -ServerAddresses "$DNSServers"
 Rename-Computer -NewName "$Host_Name" -Restart
