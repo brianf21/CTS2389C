@@ -4,6 +4,12 @@ $departments = "English Department", "Math Department", "Computer Science Depart
 $employeeTypes = "Management", "Staff", "Faculty"
 $UsersOrWorkstations = "Users", "Workstations"
 
+# Deletes all the OUs for testing
+foreach ($campus in $campuses)
+{
+  Remove-ADOrganizationalUnit -Identity "OU=$campus,$domainQuery" -Recursive
+}
+
 foreach ($campus in $campuses)
 {
   New-ADOrganizationalUnit -Name $campus -Path $domainQuery -ProtectedFromAccidentalDeletion $false
