@@ -3,7 +3,7 @@ $uoneAttributes = @{
   ChangePasswordAtLogon = $false
 
   UserPrincipalName = "uone@contoso.com"
-  Name = "User One"
+  Name = "uone"
   GivenName = "User"
   Surname = "One"
   DisplayName = "User One"
@@ -24,7 +24,7 @@ $utwoAttributes = @{
   ChangePasswordAtLogon = $false
 
   UserPrincipalName = "utwo@contoso.com"
-  Name = "User Two"
+  Name = "utwo"
   GivenName = "User"
   Surname = "Two"
   DisplayName = "User Two"
@@ -45,7 +45,7 @@ $uthreeAttributes = @{
   ChangePasswordAtLogon = $false
 
   UserPrincipalName = "uthree@contoso.com"
-  Name = "User Three"
+  Name = "uthree"
   GivenName = "User"
   Surname = "Three"
   DisplayName = "User Three"
@@ -66,7 +66,7 @@ $ufourAttributes = @{
   ChangePasswordAtLogon = $false
 
   UserPrincipalName = "ufour@contoso.com"
-  Name = "User Four"
+  Name = "ufour"
   GivenName = "User"
   Surname = "Four"
   DisplayName = "User Four"
