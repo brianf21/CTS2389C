@@ -3,7 +3,8 @@ $uoneAttributes = @{
   ChangePasswordAtLogon = $false
 
   UserPrincipalName = "uone@contoso.com"
-  Name = "uone"
+  SamAccountName = "uone"
+  Name = "User One"
   GivenName = "User"
   Surname = "One"
   DisplayName = "User One"
@@ -24,7 +25,8 @@ $utwoAttributes = @{
   ChangePasswordAtLogon = $false
 
   UserPrincipalName = "utwo@contoso.com"
-  Name = "utwo"
+  SamAccountName = "utwo"
+  Name = "User Two"
   GivenName = "User"
   Surname = "Two"
   DisplayName = "User Two"
@@ -45,7 +47,8 @@ $uthreeAttributes = @{
   ChangePasswordAtLogon = $false
 
   UserPrincipalName = "uthree@contoso.com"
-  Name = "uthree"
+  SamAccountName = "uthree"
+  Name = "User Three"
   GivenName = "User"
   Surname = "Three"
   DisplayName = "User Three"
@@ -66,7 +69,8 @@ $ufourAttributes = @{
   ChangePasswordAtLogon = $false
 
   UserPrincipalName = "ufour@contoso.com"
-  Name = "ufour"
+  SamAccountName = "ufour"
+  Name = "User Four"
   GivenName = "User"
   Surname = "Four"
   DisplayName = "User Four"
@@ -89,4 +93,4 @@ New-ADUser @ufourAttributes
 
 New-ADGroup -Name "Test Users" -SamAccountName "Test Users" -GroupCategory Security -GroupScope Global -DisplayName "Test Users" -Path "CN=Users,DC=contoso,DC=Com" -Description "Test group"
 
-Add-ADGroupMember -Identity "Test Users" -Members "User One","User Two","User Three","User Four"
+Add-ADGroupMember -Identity "Test Users" -Members "uone","utwo","uthree","ufour"
